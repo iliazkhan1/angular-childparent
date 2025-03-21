@@ -1,0 +1,26 @@
+<h1>PARENT COMPONENT</h1>
+<p>Display StudentID, Student Name, Gender, DOB, Coursefee in Parent component.
+<div>
+    <h1>Student Info</h1>
+      <table border="10" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Date of Birth</th>
+          <th>Course Fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.gender }}</td>
+          <td>{{ student.dob }}</td> 
+          <td>{{ student.courseFee }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <app-student-summary [totalCount]="totalCount" [maleCount]="maleCount" [femaleCount]="femaleCount"></app-student-summary>
+  </div>
